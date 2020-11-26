@@ -4,7 +4,7 @@ def getDoubleAlphabet(alphabet):
 
 
 def getMessage():
-    message=str(input("Please enter a message: "))
+    message=input("Please enter the message you want to encrypt: ")
     return message   
 
 
@@ -33,17 +33,17 @@ def decryptMessage(message, cipherKey, alphabet):
     return encryptMessage(message, decryptKey, alphabet)
 
 def runCaesarCipherProgram():
-    myAlphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
-    print(f"Alphabet: {myAlphabet}" )
-    myAlphabet2 = getDoubleAlphabet(myAlphabet)
-    print("Alphabet2: "+ myAlphabet2)
-    myMessage = input("Write a message: ")
+    myAlphanumeric="ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
+    print(f"Alphanumeric: {myAlphanumeric}" )
+    myAlphanumeric2 = getDoubleAlphabet(myAlphanumeric)
+    print("Alphanumeric2: "+ myAlphanumeric2)
+    myMessage = getMessage()
     print(myMessage)
     myCipherKey = getCipherKey()
     print(myCipherKey)
-    myEncryptedMessage = encryptMessage(myMessage, myCipherKey, myAlphabet2)
+    myEncryptedMessage = encryptMessage(myMessage, myCipherKey, myAlphanumeric2)
     print("Encrypted Message: " + myEncryptedMessage)
-    myDecryptedMessage = decryptMessage(myEncryptedMessage, myCipherKey,myAlphabet2)
+    myDecryptedMessage = decryptMessage(myEncryptedMessage, myCipherKey,myAlphanumeric2)
     print('Decypted Message: '+myDecryptedMessage)
     
 runCaesarCipherProgram()    
