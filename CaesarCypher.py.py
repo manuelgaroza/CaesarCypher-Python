@@ -1,19 +1,19 @@
-def getDoubleAlphabet(alphabet):
+def getDoubleAlphabet(alphabet):                      
    doubleAlphabet = alphabet + alphabet
    return doubleAlphabet
 
 
-def getMessage():
+def getMessage():                                        #function to return the message you want to encrypt
     message=input("Please enter the message you want to encrypt: ")
     return message   
 
 
-def getCipherKey():
-   shiftAmount = input( "Please enter a key (whole number from 1-25): ")
+def getCipherKey():                             #function to return the cypher key
+   shiftAmount = input( "Please enter a key (whole number from 1-25): ") 
    return shiftAmount
 
                           
-def encryptMessage(message, cipherKey, alphabet):
+def encryptMessage(message, cipherKey, alphabet):   #function to encrypt
     encryptedMessage = ""
     uppercaseMessage = ""
     uppercaseMessage = message.upper()
@@ -28,11 +28,11 @@ def encryptMessage(message, cipherKey, alphabet):
             encryptedMessage = encryptedMessage + currentCharacter
     return encryptedMessage  
 
-def decryptMessage(message, cipherKey, alphabet):
+def decryptMessage(message, cipherKey, alphabet):      #function to decrypt
     decryptKey = -1 * int(cipherKey)
     return encryptMessage(message, decryptKey, alphabet)
 
-def runCaesarCipherProgram():
+def runCaesarCipherProgram():                            #function to run all the script
     myAlphanumeric="ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
     print(f"Alphanumeric: {myAlphanumeric}" )
     myAlphanumeric2 = getDoubleAlphabet(myAlphanumeric)
