@@ -36,14 +36,14 @@ def runCaesarCipherProgram():                            #function to run all th
     myAlphanumeric="ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
     print(f"Alphanumeric: {myAlphanumeric}" )
     myAlphanumeric2 = getDoubleAlphabet(myAlphanumeric)
-    print("Alphanumeric2: "+ myAlphanumeric2)
+    print(f"Alphanumeric2:{myAlphanumeric2}")
     myMessage = getMessage()
     print(myMessage)
     myCipherKey = getCipherKey()
     print(myCipherKey)
     myEncryptedMessage = encryptMessage(myMessage, myCipherKey, myAlphanumeric2)
-    print("Encrypted Message: " + myEncryptedMessage)
+    print(f"Encrypted Message: {myEncryptedMessage}")
     myDecryptedMessage = decryptMessage(myEncryptedMessage, myCipherKey,myAlphanumeric2)
-    print('Decypted Message: '+myDecryptedMessage)
+    print(f"Decypted Message: {myDecryptedMessage}")
     
 runCaesarCipherProgram()    
